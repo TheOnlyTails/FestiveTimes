@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "color=white": {
+      "model": "festive_times:block/present_white"
+    },
+    "color=orange": {
+      "model": "festive_times:block/present_orange"
+    },
+    "color=magenta": {
+      "model": "festive_times:block/present_magenta"
+    },
+    "color=light_blue": {
+      "model": "festive_times:block/present_light_blue"
+    },
+    "color=yellow": {
+      "model": "festive_times:block/present_yellow"
+    },
+    "color=lime": {
+      "model": "festive_times:block/present_lime"
+    },
+    "color=pink": {
+      "model": "festive_times:block/present_pink"
+    },
+    "color=gray": {
+      "model": "festive_times:block/present_gray"
+    },
+    "color=light_gray": {
+      "model": "festive_times:block/present_light_gray"
+    },
+    "color=cyan": {
+      "model": "festive_times:block/present_cyan"
+    },
+    "color=purple": {
+      "model": "festive_times:block/present_purple"
+    },
+    "color=blue": {
+      "model": "festive_times:block/present_blue"
+    },
+    "color=brown": {
+      "model": "festive_times:block/present_brown"
+    },
+    "color=green": {
+      "model": "festive_times:block/present_green"
+    },
+    "color=red": {
+      "model": "festive_times:block/present_red"
+    },
+    "color=black": {
+      "model": "festive_times:block/present_black"
+    }
+  }
+}

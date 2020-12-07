@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "festive_times:block/present_top_blue",
+    "bottom": "festive_times:block/present_side_blue",
+    "side": "festive_times:block/present_side_blue"
+  }
+}
