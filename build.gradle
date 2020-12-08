@@ -18,7 +18,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = project.minecraft_version + '-' + project.mod_version
+version = "$project.minecraft_version-$project.mod_version"
 group = project.maven_group
 archivesBaseName = project.archives_base_name
 
@@ -97,7 +97,7 @@ repositories {
 dependencies {
     implementation 'org.jetbrains:annotations:20.1.0'
 
-    minecraft 'net.minecraftforge:forge:' + project.minecraft_version + '-' + project.forge_version
+    minecraft "net.minecraftforge:forge:$project.minecraft_version-$project.forge_version"
 
     // Use the latest version of KotlinForForge
     fg.deobf(implementation('thedarkcolour:kotlinforforge:' + project.kff_version))

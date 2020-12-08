@@ -1,13 +1,12 @@
 package com.theonlytails.festivetimes.blocks
 
-import com.theonlytails.festivetimes.items.PresentBlockItem
-import com.theonlytails.festivetimes.registries.ItemRegistry
 import com.theonlytails.festivetimes.util.enums.PresentColors
 import net.minecraft.block.*
 import net.minecraft.block.material.Material
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.inventory.InventoryHelper
 import net.minecraft.item.BlockItemUseContext
+import net.minecraft.item.DyeItem
 import net.minecraft.item.Items
 import net.minecraft.particles.ParticleTypes
 import net.minecraft.state.EnumProperty
@@ -51,12 +50,17 @@ class PresentBlock : Block(Properties.create(Material.WOOL)
 		handIn: Hand,
 		hit: BlockRayTraceResult,
 	): ActionResultType {
-		val item = possiblePresents.keys.random()
-		val presentStack = IS(item, possiblePresents[item]?.random() ?: 1)
+		val activeItem = player.getHeldItem(handIn).item
+		if (activeItem is DyeItem) {
+			worldIn.setBlockState(pos, state.with(COLOR, PresentColors.getColorFromDye(activeItem.dyeColor)))
+		} else {
+			val item = possiblePresents.keys.random()
+			val presentStack = IS(item, possiblePresents[item]?.random() ?: 1)
 
-		InventoryHelper.spawnItemStack(worldIn, pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), presentStack)
+			InventoryHelper.spawnItemStack(worldIn, pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), presentStack)
 
-		worldIn.setBlockState(pos, Blocks.AIR.defaultState)
+			worldIn.setBlockState(pos, Blocks.AIR.defaultState)
+		}
 
 		return ActionResultType.SUCCESS
 	}
@@ -78,12 +82,8 @@ class PresentBlock : Block(Properties.create(Material.WOOL)
 		)
 	}
 
-	override fun getStateForPlacement(context: BlockItemUseContext): BlockState {
-		return this.defaultState.with(COLOR,
-			(context.item.item as PresentBlockItem).getColorFromStack(context.player?.activeItemStack
-				?: IS(ItemRegistry.PRESENT_BLOCK)))
-
-	}
+	override fun getStateForPlacement(context: BlockItemUseContext): BlockState = this.defaultState.with(COLOR,
+		PresentColors.RED)
 
 	override fun getComparatorInputOverride(blockState: BlockState, worldIn: World, pos: BlockPos) = 15
 

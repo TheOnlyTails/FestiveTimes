@@ -1,3 +1,19 @@
 {
-  "type": "festive_times:present_serializer"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#d#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "festive_times:wrapping_paper"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "festive_times:present"
+  }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "festive_times:item/wrapping_paper_gray"
-  }
-}

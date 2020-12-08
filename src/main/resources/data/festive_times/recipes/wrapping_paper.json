@@ -1,3 +1,19 @@
 {
-  "type": "festive_times:wrapping_paper_serializer"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#d#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "d": {
+      "tag": "forge:dyes"
+    }
+  },
+  "result": {
+    "item": "festive_times:wrapping_paper"
+  }
 }
