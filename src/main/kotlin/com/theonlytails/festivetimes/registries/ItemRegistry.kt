@@ -7,6 +7,7 @@ import net.minecraft.item.Item
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 
+@Suppress("unused")
 object ItemRegistry {
 	val ITEMS = KDeferredRegister(ForgeRegistries.ITEMS, FestiveTimes.MOD_ID)
 

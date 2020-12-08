@@ -3,7 +3,7 @@ package com.theonlytails.festivetimes.util.enums
 import net.minecraft.item.DyeColor
 import net.minecraft.util.IStringSerializable
 
-enum class PresentColors(val dye: DyeColor) : IStringSerializable {
+enum class PresentColors(private val dye: DyeColor) : IStringSerializable {
 	WHITE(DyeColor.WHITE),
 	ORANGE(DyeColor.ORANGE),
 	MAGENTA(DyeColor.MAGENTA),
@@ -43,7 +43,5 @@ enum class PresentColors(val dye: DyeColor) : IStringSerializable {
 			DyeColor.RED -> RED
 			DyeColor.BLACK -> BLACK
 		}
-
-		fun getColorValue(color: PresentColors) = color.dye.colorValue
 	}
 }
