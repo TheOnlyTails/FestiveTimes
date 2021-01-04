@@ -3,6 +3,7 @@ package com.theonlytails.festivetimes
 import com.theonlytails.festivetimes.FestiveTimes.MOD_ID
 import com.theonlytails.festivetimes.registries.BlockRegistry
 import com.theonlytails.festivetimes.registries.ItemRegistry
+import com.theonlytails.festivetimes.trades.TradesEvent
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
@@ -25,5 +26,7 @@ object FestiveTimes {
 
 		BlockRegistry.BLOCKS.register(MOD_BUS)
 		ItemRegistry.ITEMS.register(MOD_BUS)
+
+		FORGE_BUS.addListener(TradesEvent::addPresentTrade)
 	}
 }

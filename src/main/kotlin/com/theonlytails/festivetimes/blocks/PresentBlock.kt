@@ -74,7 +74,7 @@ class PresentBlock : Block(Properties.create(Material.WOOL)
 		worldIn.addParticle(
 			ParticleTypes.TOTEM_OF_UNDYING,
 			pos.x.toDouble(),
-			pos.y.toDouble(),
+			pos.up(2).y.toDouble(),
 			pos.z.toDouble(),
 			0.1,
 			0.1,
