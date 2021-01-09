@@ -7,3 +7,7 @@
 Festive Times is a Minecraft Forge mod for Minecraft 1.16.4.
 
 This mod is a celebrating the winter holidays, and was made for the *Only One - Winter Modding Competition* by TurtyWurty.
+
+Features:
+- Presents: drop random items when right clicked on. Use dyes on them to dye them.
+- Candy cane: Like a sword, but eatable.
